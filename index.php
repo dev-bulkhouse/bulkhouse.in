@@ -77,7 +77,7 @@
                             {
                                 $.ajax({
                                     type: "POST",
-                                    url: "<?php echo base_url();?>/register/check_user",
+                                    url: "https://sellers.bulkhouse.in/register/check_user",
                                     data: "email=" + $("#email").val(),
                                     success: function(msg) {
                                         if (msg == "false")
@@ -372,11 +372,11 @@
                                     
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required="required">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">
                                 </div>
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Password</label>
-                                    <input type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="Password" required="required">
+                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required="required">
                                 </div>
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Confirm Password</label>
@@ -428,11 +428,11 @@
                                     
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required="required">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">
                                 </div>
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Password</label>
-                                    <input type="email" name="password" class="form-control" id="exampleInputEmail1" placeholder="Password" required="required">
+                                    <input type="email" name="password" class="form-control" id="password" placeholder="Password" required="required">
                                 </div>
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Confirm Password</label>
@@ -484,12 +484,12 @@
                                     
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required="required">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">
                                 </div>
                                     
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Password</label>
-                                    <input type="email" name="password" class="form-control" id="exampleInputEmail1" placeholder="Password" required="required">
+                                    <input type="email" name="password" class="form-control" id="password" placeholder="Password" required="required">
                                 </div>
                                     <div class="form-group">
                                     <label for="exampleInputEmail1">Confirm Password</label>
