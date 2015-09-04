@@ -106,7 +106,7 @@ input[type=number] {
                             {
                                 $.ajax({
                                     type: "POST",
-                                    url: "https://sellers.bulkhouse.in/register/check_user",
+                                    url: "https://testseller.bulkhouse.in/register/check_user",
                                     data: "email=" + $("#email").val(),
                                     success: function(msg) {
                                         if (msg == "false")
@@ -293,14 +293,14 @@ input[type=number] {
                             <h4 class="modal-title">Seller Login</h4>
                         </div>
                         <div class="modal-body">
-                            <form  action="http://sellers.bulkhouse.in/user/login_user" method="post">
+                            <form data-toggle="validator" role="form"  action="http://testseller.bulkhouse.in/user/login_user" method="post">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                    <label for="emainId">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="emainId" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                                 </div>
 
                                 <div class="form-group">
@@ -326,10 +326,10 @@ input[type=number] {
                             <h4 class="modal-title">Forgot password</h4>
                         </div>
                         <div class="modal-body">
-                            <form  action="http://sellers.bulkhouse.in/login/reset_password" method="post">
+                            <form data-toggle="validator" role="form"  action="http://testseller.bulkhouse.in/login/reset_password" method="post">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                    <label for="emainId">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="emainId" placeholder="Email">
                                 </div>
                                 <!--                               
                                                                 
@@ -371,7 +371,7 @@ input[type=number] {
 
 
                             <div id="Export" style="display: none">
-                                <form data-toggle="validator" role="form"  id="form_reg" action="http://sellers.bulkhouse.in/register/register_user" method="post">
+                                <form data-toggle="validator" role="form"  id="form_reg" action="http://testseller.bulkhouse.in/register/register_user" method="post">
                                     
                                     <div class="form-group">
                                         <label for="firmType">Firm Type <small> *</small></label>
@@ -425,7 +425,7 @@ input[type=number] {
                                     
                                 <div class="checkbox">
                                     <label>
-                                    <input type="checkbox" required="required"> I agree to the Terms & Conditions (Export <a target="_blank" href="http://sellers.bulkhouse.in/export_terms">)View</a>
+                                    <input type="checkbox" required="required"> I agree to the Terms & Conditions (Export <a target="_blank" href="http://testseller.bulkhouse.in/export_terms">)View</a>
                                     </label>
                                    
                                 </div>
@@ -433,7 +433,7 @@ input[type=number] {
                                      </form>
                                 </div>
                             <div id="Domestic" style="display: none">
-                                <form data-toggle="validator" role="form"   id="form_reg" action="http://sellers.bulkhouse.in/register/register_user" method="post">
+                                <form data-toggle="validator" role="form"   id="form_reg" action="http://testseller.bulkhouse.in/register/register_user" method="post">
                                     
                                     <div class="form-group">
                                         <label for="firmType">Firm Type <small> *</small></label>
@@ -488,14 +488,14 @@ input[type=number] {
                                 <div class="checkbox">
                                     
                                     <label>
-                                        <input type="checkbox" required="required"> I agree to the Terms & Conditions (Domestic <a target="_blank" href="http://sellers.bulkhouse.in/domestic_terms">)View</a>
+                                        <input type="checkbox" required="required"> I agree to the Terms & Conditions (Domestic <a target="_blank" href="http://testseller.bulkhouse.in/domestic_terms">)View</a>
                                     </label>
                                 </div>
                                     <button type="submit" class="btn btn-default">Register</button>
                                      </form>
                                 </div>
                             <div id="Both" style="display: none">
-                                <form data-toggle="validator" role="form"   id="form_reg" action="http://sellers.bulkhouse.in/register/register_user" method="post">
+                                <form data-toggle="validator" role="form"   id="form_reg" action="http://testseller.bulkhouse.in/register/register_user" method="post">
                                     
                                     <div class="form-group">
                                         <label for="firmType">Firm Type <small> *</small></label>
@@ -549,10 +549,10 @@ input[type=number] {
                                     
                                 <div class="checkbox">
                                     <label>
-                                    <input type="checkbox" required="required"> I agree to the Terms & Conditions (Export <a target="_blank" href="http://sellers.bulkhouse.in/export_terms">)View</a>
+                                    <input type="checkbox" required="required"> I agree to the Terms & Conditions (Export <a target="_blank" href="http://testseller.bulkhouse.in/export_terms">)View</a>
                                     </label>
                                     <label>
-                                    <input type="checkbox" required="required"> I agree to the Terms & Conditions (Domestic <a target="_blank" href="http://sellers.bulkhouse.in/domestic_terms">)View</a>
+                                    <input type="checkbox" required="required"> I agree to the Terms & Conditions (Domestic <a target="_blank" href="http://testseller.bulkhouse.in/domestic_terms">)View</a>
                                     </label>
                                 </div>
                                     
