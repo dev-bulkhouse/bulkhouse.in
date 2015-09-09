@@ -89,17 +89,17 @@ $(document).ready(function(){
         e.preventDefault();
         $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Export").val()}, function (data) {
             if(data === "true") {
-                $(".verify").css("visibility", "visible");
-                $(".verify_none").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "hidden");
+                $(".verify").css("display", "block");
+                $(".verify_none").css("display", "none");
+                $(".verify_none_chk").css("display", "none");
             } else if(data == "false") {
-                $(".verify_none").css("visibility", "visible");
-                $(".verify").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "hidden");
+                $(".verify_none").css("visibility", "block");
+                $(".verify").css("visibility", "none");
+                $(".verify_none_chk").css("visibility", "none");
             } else if(data == "unknown") {
-                $(".verify").css("visibility", "hidden");
-                $(".verify_none").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "visible");
+                $(".verify").css("visibility", "none");
+                $(".verify_none").css("visibility", "none");
+                $(".verify_none_chk").css("visibility", "block");
             }
         });
     });
@@ -108,17 +108,17 @@ $(document).ready(function(){
         e.preventDefault();
         $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Domestic").val()}, function (data) {
             if(data === "true") {
-                $(".verify").css("visibility", "visible");
-                $(".verify_none").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "hidden");
+                $(".verify").css("display", "block");
+                $(".verify_none").css("display", "none");
+                $(".verify_none_chk").css("display", "none");
             } else if(data == "false") {
-                $(".verify_none").css("visibility", "visible");
-                $(".verify").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "hidden");
+                $(".verify_none").css("visibility", "block");
+                $(".verify").css("visibility", "none");
+                $(".verify_none_chk").css("visibility", "none");
             } else if(data == "unknown") {
-                $(".verify").css("visibility", "hidden");
-                $(".verify_none").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "visible");
+                $(".verify").css("visibility", "none");
+                $(".verify_none").css("visibility", "none");
+                $(".verify_none_chk").css("visibility", "block");
             }
         });
     });
@@ -128,17 +128,17 @@ $(document).ready(function(){
         alert("clicked");
         $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Both").val()}, function (data) {
             if(data === "true") {
-                $(".verify").css("visibility", "visible");
-                $(".verify_none").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "hidden");
+                $(".verify").css("display", "block");
+                $(".verify_none").css("display", "none");
+                $(".verify_none_chk").css("display", "none");
             } else if(data == "false") {
-                $(".verify_none").css("visibility", "visible");
-                $(".verify").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "hidden");
+                $(".verify_none").css("visibility", "block");
+                $(".verify").css("visibility", "none");
+                $(".verify_none_chk").css("visibility", "none");
             } else if(data == "unknown") {
-                $(".verify").css("visibility", "hidden");
-                $(".verify_none").css("visibility", "hidden");
-                $(".verify_none_chk").css("visibility", "visible");
+                $(".verify").css("visibility", "none");
+                $(".verify_none").css("visibility", "none");
+                $(".verify_none_chk").css("visibility", "block");
             }
         });
     });
@@ -519,9 +519,9 @@ $(document).ready(function(){
                                 </div>
 
                                 <div class="small-4 columns zeropadding">
-                                    <span id="usr_verify" class="verify" style="visibility: hidden; font-size: 0.8em; padding: 10px" >Valid Email <i class="fa fa-check"></i></span>
-                                    <span id="usr_verify" class="verify_none" style="visibility: hidden; font-size: 0.8em;padding: 10px" >This Email-Id is already in use <i class="fa fa-times"></i></span>
-                                    <span id="usr_verify" class="verify_none_chk" style="visibility: hidden; font-size: 0.8em;padding: 10px" >Not a Valid Email <i class="fa fa-times"></i></span>
+                                    <span id="usr_verify" class="verify" style="display: none; font-size: 0.8em; padding: 10px" >Valid Email <i class="fa fa-check"></i></span>
+                                    <span id="usr_verify" class="verify_none" style="display: none; font-size: 0.8em;padding: 10px" >This Email-Id is already in use <i class="fa fa-times"></i></span>
+                                    <span id="usr_verify" class="verify_none_chk" style="display: none; font-size: 0.8em;padding: 10px" >Not a Valid Email <i class="fa fa-times"></i></span>
 
                     <!--<span id="usr_verify" class="verify_not_done" >no</span>-->
 
@@ -640,9 +640,9 @@ $(document).ready(function(){
                                 </div>
 
                                 <div class="small-4 columns zeropadding">
-                                    <span id="usr_verify" class="verify" style="visibility: hidden; font-size: 0.8em; padding: 10px" >Valid Email <i class="fa fa-check"></i></span>
-                                    <span id="usr_verify" class="verify_none" style="visibility: hidden; font-size: 0.8em;padding: 10px" >This Email-Id is already in use <i class="fa fa-times"></i></span>
-                                    <span id="usr_verify" class="verify_none_chk" style="visibility: hidden; font-size: 0.8em;padding: 10px" >Not a Valid Email <i class="fa fa-times"></i></span>
+                                    <span id="usr_verify" class="verify" style="display: none; font-size: 0.8em; padding: 10px" >Valid Email <i class="fa fa-check"></i></span>
+                                    <span id="usr_verify" class="verify_none" style="display: none; font-size: 0.8em;padding: 10px" >This Email-Id is already in use <i class="fa fa-times"></i></span>
+                                    <span id="usr_verify" class="verify_none_chk" style="display: none; font-size: 0.8em;padding: 10px" >Not a Valid Email <i class="fa fa-times"></i></span>
 
                     <!--<span id="usr_verify" class="verify_not_done" >no</span>-->
 
@@ -761,9 +761,9 @@ $(document).ready(function(){
                                 </div>
 
                                 <div class="small-4 columns zeropadding">
-                                    <span id="usr_verify" class="verify" style="visibility: hidden; font-size: 0.8em; padding: 10px" >Valid Email <i class="fa fa-check"></i></span>
-                                    <span id="usr_verify" class="verify_none" style="visibility: hidden; font-size: 0.8em;padding: 10px" >This Email-Id is already in use <i class="fa fa-times"></i></span>
-                                    <span id="usr_verify" class="verify_none_chk" style="visibility: hidden; font-size: 0.8em;padding: 10px" >Not a Valid Email <i class="fa fa-times"></i></span>
+                                    <span id="usr_verify" class="verify" style="display: none; font-size: 0.8em; padding: 10px" >Valid Email <i class="fa fa-check"></i></span>
+                                    <span id="usr_verify" class="verify_none" style="display: none; font-size: 0.8em;padding: 10px" >This Email-Id is already in use <i class="fa fa-times"></i></span>
+                                    <span id="usr_verify" class="verify_none_chk" style="display: none; font-size: 0.8em;padding: 10px" >Not a Valid Email <i class="fa fa-times"></i></span>
 
                     <!--<span id="usr_verify" class="verify_not_done" >no</span>-->
 
