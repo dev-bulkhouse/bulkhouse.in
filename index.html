@@ -83,14 +83,19 @@ else
 
     <script type="text/javascript">
 $(document).ready(function(){
-      $(".emailValidation").blur(function() {
-        $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail").val()}, function (data) {
-            if(data === "true") {
-                $(".verify").css("visibility", "visible");
-            } else if(data == "false") {
-                alert("Not validated");
-            } else if(data == "unknown") {
-                alert("get out");
+ $(".emailValidation_Export").blur(function(){
+  if($("#newEmail_Export").val().length >= 4)
+  {
+  $.ajax({
+   type: "POST",
+   url: "http://sellers.bulkhouse.in/register/check_user",
+   headers: { 'Access-Control-Allow-Origin': '*' },
+   crossDomain: true,
+   data: "email="+$("#newEmail_Export").val(),
+   success: function(msg){
+    if(msg=="false")
+    {
+    document.getElementById("email").setCustomValidity("Submit Unique EmailID");
             }
         });
     });
