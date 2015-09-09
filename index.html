@@ -89,6 +89,8 @@ $(document).ready(function(){
   $.ajax({
    type: "POST",
    url: "http://sellers.bulkhouse.in/register/check_user",
+   headers: { 'Access-Control-Allow-Origin': '*' },
+   crossDomain: true,
    data: "email="+$("#email").val(),
    success: function(msg){
     if(msg=="false")
