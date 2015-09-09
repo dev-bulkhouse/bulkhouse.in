@@ -85,7 +85,8 @@ else
 $(document).ready(function(){
  
     
-    $(".emailValidation_Export").blur(function() {
+    $(".emailValidation_Export").blur(function(e) {
+        e.preventDefault();
         $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Export").val()}, function (data) {
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
@@ -97,7 +98,8 @@ $(document).ready(function(){
         });
     });
     
-    $(".emailValidation_Domestic").blur(function() {
+    $(".emailValidation_Domestic").blur(function(e) {
+        e.preventDefault();
         $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Domestic").val()}, function (data) {
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
@@ -109,7 +111,8 @@ $(document).ready(function(){
         });
     });
     
-    $(".emailValidation_Both").blur(function() {
+    $(".emailValidation_Both").blur(function(e) {
+        e.preventDefault();
         alert("clicked");
         $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Both").val()}, function (data) {
             alert(data);
