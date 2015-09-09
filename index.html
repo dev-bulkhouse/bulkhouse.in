@@ -86,7 +86,8 @@ $(document).ready(function(){
  
     
     $(".emailValidation_Export").blur(function() {
-        $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Export").val()}, function (data) {
+        $.get("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Export").val()}, function (data) {
+            alert(data);
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
             } else if(data == "false") {
@@ -98,7 +99,7 @@ $(document).ready(function(){
     });
     
     $(".emailValidation_Domestic").blur(function() {
-        $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Domestic").val()}, function (data) {
+        $.get("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Domestic").val()}, function (data) {
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
             } else if(data == "false") {
@@ -111,7 +112,7 @@ $(document).ready(function(){
     
     $(".emailValidation_Both").blur(function() {
         alert("clicked");
-        $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Both").val()}, function (data) {
+        $.get("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Both").val()}, function (data) {
             alert(data);
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
