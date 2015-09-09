@@ -84,7 +84,7 @@ else
     <script type="text/javascript">
 $(document).ready(function(){
       $(".emailValidation").blur(function() {
-        $.post("<?php echo base_url();?>/register/check_user", {email : $("#newEmail").val()}, function (data) {
+        $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail").val()}, function (data) {
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
             } else if(data == "false") {
