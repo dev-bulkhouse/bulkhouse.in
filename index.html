@@ -90,9 +90,15 @@ $(document).ready(function(){
         $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Export").val()}, function (data) {
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
+                $(".verify_none").css("visibility", "hidden");
+                $(".verify_none_chk").css("visibility", "hidden");
             } else if(data == "false") {
                 $(".verify_none").css("visibility", "visible");
+                $(".verify").css("visibility", "hidden");
+                $(".verify_none_chk").css("visibility", "hidden");
             } else if(data == "unknown") {
+                $(".verify").css("visibility", "hidden");
+                $(".verify_none").css("visibility", "hidden");
                 $(".verify_none_chk").css("visibility", "visible");
             }
         });
@@ -103,9 +109,15 @@ $(document).ready(function(){
         $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Domestic").val()}, function (data) {
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
+                $(".verify_none").css("visibility", "hidden");
+                $(".verify_none_chk").css("visibility", "hidden");
             } else if(data == "false") {
                 $(".verify_none").css("visibility", "visible");
+                $(".verify").css("visibility", "hidden");
+                $(".verify_none_chk").css("visibility", "hidden");
             } else if(data == "unknown") {
+                $(".verify").css("visibility", "hidden");
+                $(".verify_none").css("visibility", "hidden");
                 $(".verify_none_chk").css("visibility", "visible");
             }
         });
@@ -115,12 +127,17 @@ $(document).ready(function(){
         e.preventDefault();
         alert("clicked");
         $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Both").val()}, function (data) {
-            alert(data);
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
+                $(".verify_none").css("visibility", "hidden");
+                $(".verify_none_chk").css("visibility", "hidden");
             } else if(data == "false") {
                 $(".verify_none").css("visibility", "visible");
+                $(".verify").css("visibility", "hidden");
+                $(".verify_none_chk").css("visibility", "hidden");
             } else if(data == "unknown") {
+                $(".verify").css("visibility", "hidden");
+                $(".verify_none").css("visibility", "hidden");
                 $(".verify_none_chk").css("visibility", "visible");
             }
         });
