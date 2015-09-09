@@ -87,7 +87,6 @@ $(document).ready(function(){
     
     $(".emailValidation_Export").blur(function() {
         $.get("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Export").val()}, function (data) {
-            alert(data);
             if(data === "true") {
                 $(".verify").css("visibility", "visible");
             } else if(data == "false") {
