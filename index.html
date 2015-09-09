@@ -89,8 +89,6 @@ $(document).ready(function(){
   $.ajax({
    type: "POST",
    url: "http://www.sellers.bulkhouse.in/register/check_user",
-   headers: { 'Access-Control-Allow-Origin': '*' },
-   crossDomain: true,
    data: "email="+$("#newEmail_Export").val(),
    success: function(msg){
     if(msg=="false")
@@ -108,8 +106,6 @@ $(document).ready(function(){
   $.ajax({
    type: "POST",
    url: "http://www.sellers.bulkhouse.in/register/check_user",
-   headers: { 'Access-Control-Allow-Origin': '*' },
-   crossDomain: true,
    data: "email="+$("#newEmail_Domestic").val(),
    success: function(msg){
     if(msg=="false")
@@ -127,8 +123,6 @@ $(document).ready(function(){
   $.ajax({
    type: "POST",
    url: "http://www.sellers.bulkhouse.in/register/check_user",
-   headers: { 'Access-Control-Allow-Origin': '*' },
-   crossDomain: true,
    data: "email="+$("#newEmail_Both").val(),
    success: function(msg){
     if(msg=="false")
