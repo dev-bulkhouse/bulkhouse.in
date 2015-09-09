@@ -89,7 +89,6 @@ $(document).ready(function(){
   $.ajax({
    type: "POST",
    url: "http://sellers.bulkhouse.in/register/check_user",
-   headers: { 'Access-Control-Allow-Origin': '*' },
    crossDomain: true,
    data: "email="+$("#email").val(),
    success: function(msg){
@@ -453,7 +452,7 @@ $(document).ready(function(){
                         <div class="small-9 columns small-centered zeropadding">
                             <div class="row">
                                 <div class="small-8 columns zeropadding">
-                                    <input name="email" type="email"  id="email" placeholder="Please enter your Email Id" required="required" value="">
+                                    <input name="email" type="email"  id="newEmail_Export" class="emailValidation_Export" placeholder="Please enter your Email Id" required="required" value="">
                                 </div>
 
                                 <div class="small-4 columns zeropadding">
@@ -574,7 +573,7 @@ $(document).ready(function(){
                         <div class="small-9 columns small-centered zeropadding">
                             <div class="row">
                                 <div class="small-8 columns zeropadding">
-                                    <input name="email" type="email"  id="email" placeholder="Please enter your Email Id" required="required" value="">
+                                    <input name="email" type="email"  id="newEmail_Domestic" class="emailValidation_Domestic" placeholder="Please enter your Email Id" required="required" value="">
                                 </div>
 
                                 <div class="small-4 columns zeropadding">
@@ -695,7 +694,7 @@ $(document).ready(function(){
                         <div class="small-9 columns small-centered zeropadding">
                             <div class="row">
                                 <div class="small-8 columns zeropadding">
-                                    <input name="email" type="email"  id="email" placeholder="Please enter your Email Id" required="required" value="">
+                                    <input name="email" type="email"  id="newEmail_Both" class="emailValidation_Both" placeholder="Please enter your Email Id" required="required" value="">
                                 </div>
 
                                 <div class="small-4 columns zeropadding">
