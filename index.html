@@ -83,56 +83,47 @@ else
 
     <script type="text/javascript">
 $(document).ready(function(){
- $(".emailValidation_Export").blur(function(){
-  if($("#newEmail_Export").val().length >= 4)
-  {
-  $.ajax({
-   type: "POST",
-   url: "http://www.sellers.bulkhouse.in/register/check_user",
-   data: "email="+$("#newEmail_Export").val(),
-   success: function(msg){
-    if(msg=="false")
-    {
-    document.getElementById("email").setCustomValidity("Submit Unique EmailID");
+ 
+    
+    $(".emailValidation_Export").blur(function() {
+        $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Export").val()}, function (data) {
+            if(data === "true") {
+                $(".verify").css("visibility", "visible");
+            } else if(data == "false") {
+                alert("Not validated");
+            } else if(data == "unknown") {
+                alert("get out");
             }
-        }
-    });
-    }
+        });
     });
     
-    $(".emailValidation_Domestic").blur(function(){
-  if($("#newEmail_Domestic").val().length >= 4)
-  {
-  $.ajax({
-   type: "POST",
-   url: "http://www.sellers.bulkhouse.in/register/check_user",
-   data: "email="+$("#newEmail_Domestic").val(),
-   success: function(msg){
-    if(msg=="false")
-    {
-    document.getElementById("email").setCustomValidity("Submit Unique EmailID");
+    $(".emailValidation_Domestic").blur(function() {
+        $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Domestic").val()}, function (data) {
+            if(data === "true") {
+                $(".verify").css("visibility", "visible");
+            } else if(data == "false") {
+                alert("Not validated");
+            } else if(data == "unknown") {
+                alert("get out");
             }
-        }
-    });
-    }
+        });
     });
     
-    $(".emailValidation_Both").blur(function(){
-  if($("#newEmail_Both").val().length >= 4)
-  {
-  $.ajax({
-   type: "POST",
-   url: "http://www.sellers.bulkhouse.in/register/check_user",
-   data: "email="+$("#newEmail_Both").val(),
-   success: function(msg){
-    if(msg=="false")
-    {
-    document.getElementById("email").setCustomValidity("Submit Unique EmailID");
+    $(".emailValidation_Both").blur(function() {
+        $.post("http://www.sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Both").val()}, function (data) {
+            if(data === "true") {
+                $(".verify").css("visibility", "visible");
+            } else if(data == "false") {
+                alert("Not validated");
+            } else if(data == "unknown") {
+                alert("get out");
             }
-        }
+        });
     });
-    }
-    });
+    
+    
+    
+   
 // $("#email").click(function(){
 //     alert("function check");
 //  if($("#email").val().length >= 4)
