@@ -92,11 +92,11 @@ $(document).ready(function(){
                 $(".verify").css("display", "block");
                 $(".verify_none").css("display", "none");
                 $(".verify_none_chk").css("display", "none");
-            } else if(data == "false") {
+            } else if(data === "false") {
                 $(".verify_none").css("display", "block");
                 $(".verify").css("display", "none");
                 $(".verify_none_chk").css("display", "none");
-            } else if(data == "unknown") {
+            } else if(data === "unknown") {
                 $(".verify").css("display", "none");
                 $(".verify_none").css("display", "none");
                 $(".verify_none_chk").css("display", "block");
@@ -111,11 +111,11 @@ $(document).ready(function(){
                 $(".verify").css("display", "block");
                 $(".verify_none").css("display", "none");
                 $(".verify_none_chk").css("display", "none");
-            } else if(data == "false") {
+            } else if(data === "false") {
                 $(".verify_none").css("display", "block");
                 $(".verify").css("display", "none");
                 $(".verify_none_chk").css("display", "none");
-            } else if(data == "unknown") {
+            } else if(data === "unknown") {
                 $(".verify").css("display", "none");
                 $(".verify_none").css("display", "none");
                 $(".verify_none_chk").css("display", "block");
@@ -125,17 +125,16 @@ $(document).ready(function(){
     
     $(".emailValidation_Both").blur(function(e) {
         e.preventDefault();
-        alert("clicked");
         $.post("http://sellers.bulkhouse.in/register/check_user", {email : $("#newEmail_Both").val()}, function (data) {
             if(data === "true") {
                 $(".verify").css("display", "block");
                 $(".verify_none").css("display", "none");
                 $(".verify_none_chk").css("display", "none");
-            } else if(data == "false") {
+            } else if(data === "false") {
                 $(".verify_none").css("display", "block");
                 $(".verify").css("display", "none");
                 $(".verify_none_chk").css("display", "none");
-            } else if(data == "unknown") {
+            } else if(data === "unknown") {
                 $(".verify").css("display", "none");
                 $(".verify_none").css("display", "none");
                 $(".verify_none_chk").css("display", "block");
